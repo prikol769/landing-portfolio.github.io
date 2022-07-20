@@ -1,0 +1,212 @@
+$blue: #2091F9;
+$dark-blue: #252B42;
+$text: #252B42;
+$second-text: #374754;
+$white: #ffffff;
+
+
+//typography
+h1 {
+  font-size: 74px;
+  line-height: 84px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: $text;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: $text;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  color: $text;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+  color: $second-text;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1px;
+  color: $second-text;
+}
+
+@mixin paragraph-styles {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  color: $second-text;
+}
+
+@mixin link-styles {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+
+//components
+button {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $white;
+  padding: 16px 62px;
+  background: $blue;
+  border-radius: 35px;
+  border: 0;
+  cursor: pointer;
+  transition: all .2s ease-out 0s;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    background: #206ef9;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+input, textarea {
+  background: #F5F5F5;
+  border: 1px solid #E8E8E8;
+  border-radius: 39px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  outline: none;
+  caret-color: $blue;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #18171D;
+  }
+
+  &:hover {
+    border: 1px solid #C4C5D0;
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+  }
+}
+
+
+//animation
+@mixin animation-social-networks {
+  display: block;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+
+//desktop breakpoints
+$desktopXl: 1920px;
+$desktopLg: 1366px;
+$desktopMd: 1200px;
+$desktopSm: 1100px;
+
+//tablet breakpoints
+$tabletXl: 1025px;
+$tabletLg: 900px;
+
+//mobile breakpoints
+$mobileXl: 768px;
+$mobileLg: 600px;
+$mobileMd: 500px;
+$mobileSm: 400px;
+$mobileXs: 320px;
+
+
+//desktop mixin
+@mixin desktopXl {
+  @media (max-width: #{$desktopXl}) {
+    @content;
+  }
+}
+
+@mixin desktopLg {
+  @media (max-width: #{$desktopLg}) {
+    @content;
+  }
+}
+
+@mixin desktopMd {
+  @media (max-width: #{$desktopMd}) {
+    @content;
+  }
+}
+
+@mixin desktopSm {
+  @media (max-width: #{$desktopSm}) {
+    @content;
+  }
+}
+
+
+//tablet mixin
+@mixin tabletXl {
+  @media (max-width: #{$tabletXl}) {
+    @content;
+  }
+}
+
+@mixin tabletLg {
+  @media (max-width: #{$tabletLg}) {
+    @content;
+  }
+}
+
+
+//mobile mixin
+@mixin mobileXl {
+  @media (max-width: #{$mobileXl}) {
+    @content;
+  }
+}
+
+@mixin mobileLg {
+  @media (max-width: #{$mobileLg}) {
+    @content;
+  }
+}
+
+@mixin mobileMd {
+  @media (max-width: #{$mobileMd}) {
+    @content;
+  }
+}
+
+@mixin mobileSm {
+  @media (max-width: #{$mobileSm}) {
+    @content;
+  }
+}
+
+@mixin mobileXs {
+  @media (max-width: #{$mobileXs}) {
+    @content;
+  }
+}

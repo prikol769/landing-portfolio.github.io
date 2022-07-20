@@ -9,7 +9,7 @@
 - scss
 - jquery
   
-##Website responsive 
+## Website responsive 
 - desktop
 - tablet 
 - mobile 
